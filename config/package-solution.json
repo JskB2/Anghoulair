@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "anghoulair-client-side-solution",
+    "id": "20fdb526-5965-469e-ad25-b312dbf1bfd3",
+    "version": "1.0.0.1"
+  },
+  "paths": {
+    "zippedPackage": "solution/anghoulair.spapp"
+  }
+}

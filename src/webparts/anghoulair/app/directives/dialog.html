@@ -1,0 +1,27 @@
+<div class="ms-Dialog" ng-if="show">
+  <div class="ms-Overlay"></div>
+  <div class="ms-Dialog-main">    
+      
+    <div class="ms-Dialog-header">
+        <p class="dialog-head-icon"><i class="ms-Icon ms-Icon--FavoriteStarFill" ng-if="win"></i>
+      <i class="ms-Icon ms-Icon--EmojiDisappointed" ng-if="!win"></i></p>
+      <p class="ms-Dialog-title ms-u-textAlignCenter">{{title}}</p>
+      
+    </div>
+    <div class="ms-Dialog-inner">
+      <div class="ms-Dialog-content">
+        <p class="ms-Dialog-subText" ng-bind-html="text"></p>
+      </div>
+      <div class="ms-Dialog-actions">
+        <div class="ms-Dialog-actionsRight">
+          <button class="ms-Dialog-action ms-Button ms-Button--primary" ng-click="callStats()" ng-if="win">
+            <span class="ms-Button-label" >OK</span>
+          </button>
+          <button class="ms-Dialog-action ms-Button" ng-click="callQuit()">
+            <span class="ms-Button-label" >Quit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

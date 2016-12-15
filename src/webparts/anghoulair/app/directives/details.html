@@ -1,0 +1,21 @@
+<div class="ms-Grid">
+  <div class="ms-Grid-row">
+    <div class="ms-Grid-col ms-u-md12">
+      <h3>Do you wish to choose {{character.Title}}?
+        <i class="ms-Icon ms-Icon--Clear action-icon" aria-hidden="true" ng-click="closeDir()"></i>
+        <i class="ms-Icon ms-Icon--Accept action-icon" aria-hidden="true" ng-click="callStart()"></i>
+      </h3>
+      <p><span title="Weapon">
+            <i class="ms-Icon ms-Icon--PartyLeader" aria-hidden="true"></i>&nbsp; {{character.Weapon}} [{{character.MinDamage}} - {{character.Damage}}]</span>
+      </p>
+      <p><span title="Skill">
+            <i class="ms-Icon ms-Icon--Move" aria-hidden="true"></i>&nbsp; {{character.Skill}}</span></p>
+      <p>
+        <span title="Armor"><i class="ms-Icon ms-Icon--Shield" aria-hidden="true"></i>&nbsp; {{character.Armor}}</span>
+      </p>
+      <p>
+        <span title="HP"><i class="ms-Icon ms-Icon--HeartFill" aria-hidden="true"></i>&nbsp; {{character.HP}}</span>
+      </p>
+    </div>
+  </div>
+</div>

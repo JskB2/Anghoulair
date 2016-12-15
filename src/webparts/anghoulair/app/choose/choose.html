@@ -1,0 +1,47 @@
+<!--Inace je islo prvo u innerHTML, ali ni jedno ni drugo ne radi dobro-->
+<!--<div class="blocker">
+  <div>
+    <div>
+      <div class="block-in"></div>
+      <div class="block-in"></div>
+      <div class="block-in"></div>
+      <div class="block-in"></div>
+    </div>
+  </div>
+</div>-->
+
+
+<div>
+  <div>
+    <h1 class="ms-font-su ms-u-textAlignCenter">{{vm.Info}}</h1>
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12 ms-u-md4 ms-u-lg4" ng-repeat="char in vm.Characters">
+          <h2>{{char.Title}}</h2>
+          <div class="char-pic-parent" ng-click="vm.GetDetails(char)">
+            <img class="char-pic" ng-src="{{char.Picture.Url}}" alt="Picture">
+          </div>
+          <ul class="char-list">
+            <li>
+              <i class="ms-Icon ms-Icon--SIPMove ms-bgColor-themePrimary ms-borderColor-themePrimary" aria-hidden="true"></i>
+              <span>Race</span>
+              <span>{{char.Race}}</span>
+            </li>
+            <li><i class="ms-Icon ms-Icon--LightningBolt ms-bgColor-themePrimary ms-borderColor-themePrimary" aria-hidden="true"></i>
+              <span>Class</span>
+              <span>{{char.Class}}</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-md12">
+          <button class="ms-Button" ui-sref="home"><span class="ms-Button-label">Quit</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="divider20"></div>
+  </div>
+  <div class="details-directive" character="vm.Character" show="vm.ShowDetails" call-start="vm.Start()" ng-class="{ 'active': vm.ShowDetails }">
+  </div>

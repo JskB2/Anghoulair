@@ -1,0 +1,31 @@
+<div>
+  <div>
+    <h1 class="ms-font-su ms-u-textAlignCenter">{{vm.Info}}</h1>
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        
+        <div class="ms-Grid-col ms-u-md6">
+            <h2>Overall</h2>
+          <canvas id="doughnut" class="chart chart-doughnut" chart-data="vm.DoughnutData" chart-labels="vm.DoughnutLabels">
+          </canvas>
+        </div>
+        <div class="ms-Grid-col ms-u-md6">
+          <h2>Hits</h2>
+          <canvas id="bar" class="chart chart-bar" chart-data="vm.HitsData" chart-labels="vm.HitsLabels" chart-colors="vm.HitsColors">
+          </canvas>
+
+                     
+           </div>
+        </div>
+      </div>
+      <div class="divider20"></div>
+      <div class="ms-Grid">
+        <div class="ms-Grid-row">
+          <div class="ms-Grid-col ms-u-md12">
+            <button class="ms-Button" ui-sref="home"><span class="ms-Button-label">Quit</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="divider20"></div>
+      <!--<p>{{vm.HitsColors | json }}</p>-->
+    </div>

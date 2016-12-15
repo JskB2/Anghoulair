@@ -1,0 +1,21 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "15d80356-f526-49d6-bc08-2f84c1b6be22",
+  "alias": "AnghoulairWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "15d80356-f526-49d6-bc08-2f84c1b6be22",
+    "group": { "default": "Under Development" },
+    "title": { "default": "AnGhoulLair" },
+    "description": { "default": "Test Angular SP " },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "AnGhoul Lair",
+      "difficulty": false
+    }
+  }]
+}

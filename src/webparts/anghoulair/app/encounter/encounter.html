@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <h1 class="ms-font-su ms-u-textAlignCenter">{{vm.Info}}</h1>
+
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-md12 ms-u-textAlignCenter">
+          <img ng-src="{{vm.Enemy.Picture.Url}}" alt="Enemy" ng-class="{'shaded-pic': vm.Enemy.Title == 'Ghoul Knight'}">
+        </div>
+        <div class="ms-Grid-col ms-u-md12">
+          <p>You open the door and see a long corridor and a light at the end of it. You rush forward, hoping to find a way out of here while you're still alive.</p>
+          <p>But suddenly, out of the darkness a figure appears. You realize that there is a <b>{{vm.Enemy.Title}}</b> in your way. What do you do?</p>
+        </div>
+      </div>
+    </div>
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-md12">
+          <button type="button" class="ms-Button" ui-sref="fight"><span class="ms-Button-label">Fight the {{vm.Enemy.Title}}</span></button>
+          <button type="button" class="ms-Button" ng-click="vm.Flee()"><span class="ms-Button-label">Try to escape towards the end of the corridor</span></button>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="divider20"></div>
+  </div>
+</div>

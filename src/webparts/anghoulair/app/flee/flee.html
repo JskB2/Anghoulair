@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <h1 class="ms-font-su ms-u-textAlignCenter">{{vm.Info}}</h1>
+
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-md12 ms-u-textAlignCenter">
+          <img src="https://c2.staticflickr.com/4/3532/3746006105_865e31049b_z.jpg?zz=1" class="shaded-pic" alt="Escape" ng-if="vm.Run">
+          <img ng-src="https://s-media-cache-ak0.pinimg.com/236x/b0/3b/c9/b03bc9edac0a21587a5438fbe27b8388.jpg" class="shaded-pic" alt="Death" ng-if="!vm.Run">
+        </div>
+        <div class="ms-Grid-col ms-u-md12" ng-bind-html="vm.Text">         
+        </div>
+      </div>
+    </div>
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-md12">          
+          <button type="button" class="ms-Button" ui-sref="home"><span class="ms-Button-label">Quit</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="divider20"></div>
+  </div>
+</div>

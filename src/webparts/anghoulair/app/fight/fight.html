@@ -1,0 +1,43 @@
+<div>
+    <div>
+        <h1 class="ms-font-su ms-u-textAlignCenter">{{vm.Info}}</h1>
+        <div class="ms-Grid">
+            <div class="ms-Grid-row">
+                <div class="ms-Grid-col ms-u-md4 ms-u-textAlignCenter">
+                    <img class="fight-pic shaded-pic" ng-src="{{vm.Character.Picture.Url}}" alt="Character">
+                    <div id="cloud" ng-show="vm.Taunt != null">
+                        <p>{{vm.Taunt}}</p>
+                    </div>
+                    <div load="vm.Character.HP" class="hp-graph">
+                        <div id="graph"></div>
+                    </div>
+
+                </div>
+                <div class="ms-Grid-col ms-u-md4">
+                    <p class="ms-u-textAlignCenter"><i class="ms-Icon ms-Icon--ATPLogo ms-fontSize-su mt-60" aria-hidden="true"></i></p>
+                    <p class="ms-u-textAlignCenter" ng-bind-html="vm.Progress"></p>
+                </div>
+                <div class="ms-Grid-col ms-u-md4 ms-u-textAlignCenter">
+                    <img class="fight-pic" ng-src="{{vm.Enemy.Picture.Url}}" alt="Enemy" ng-class="{'shaded-pic': vm.Enemy.Title == 'Ghoul Knight'}">
+                    <div load="vm.Enemy.HP" class="hp-graph">
+                        <div id="graph"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider20"></div>
+        <div class="ms-Grid">
+            <div class="ms-Grid-row">
+                <button class="ms-Button" ng-click="vm.Attack()" ng-disabled="vm.Working">
+                    <span class="ms-Button-label">Attack</span>
+                </button>
+                <button class="ms-Button" ng-click="vm.Parry()" ng-disabled="vm.Working || vm.ParryBonus > 0"><span class="ms-Button-label">Parry</span></button>
+                <button class="ms-Button" ng-disabled="vm.Working" ng-click="vm.Flee()"><span class="ms-Button-label">Flee</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="divider20"></div>
+
+    <dialog-office show="vm.End" win="vm.Win" call-stats="vm.Stats()" call-quit="vm.Quit()"></dialog-office>
+
+</div>
